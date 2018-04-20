@@ -27,9 +27,6 @@ import java.util.Scanner;
          showpc(){            
                             
          }
-         showpc(String confirm){
-             this();
-         }
          
     public void select(){
              Scanner sc = new Scanner(System.in);
@@ -89,13 +86,47 @@ import java.util.Scanner;
           select(); 
         }      
     }
+    public void addItem(){
+        Scanner qs = new Scanner(System.in);
+        System.out.println("What do you want to add item? ");
+        System.out.println("- CPU"+"\n"+"- MAINBORD"+"\n"+"- VGA"+"\n"+"- MEMORY"+"\n"+"- HARDDISK"+"\n"+"- SSD"+"\n"+"- POWERSUPPLY");
+        System.out.print("Choose >> ");
+        String aadd = qs.nextLine();
+        System.out.println("-------------------------------------------------------------------");
+        if(aadd.equalsIgnoreCase("cpu")){
+                 System.out.println("******Central Processing Unit******");
+                 addCpu();
+             }else if(aadd.equalsIgnoreCase("mainbord")){
+                 System.out.println("******MAINBORD******");
+                 addmainbord();
+             }else if(aadd.equalsIgnoreCase("vga")){
+                 System.out.println("*****Video Graphic Adapter*****");
+                 addvga();
+             }else if(aadd.equalsIgnoreCase("memory")){
+                 System.out.println("*****MEMORY*****");
+                 addmemory();
+             }else if(aadd.equalsIgnoreCase("harddisk")){
+                 System.out.println("*****Hard Disk Drive*****");
+                 addharddisk();
+             }else if(aadd.equalsIgnoreCase("ssd")){
+                 System.out.println("*****Solid state drive*****");
+                 addssd();
+             }else if(aadd.equalsIgnoreCase("PowerSupply")){
+                 System.out.println("*****Power Supply*****");
+                 addpower();
+             }else {
+                 System.out.print("");
+             }  
+      
+                
+    }
     public void showcpu() { 
         Scanner s1 = new Scanner(System.in);
         for( c=0;c<Mcpu.length;c++){
             if(Bcpu[c]!=null&&Mcpu[c]!=null&&Pcpu[c]!=0){
                  showitem cpu = new showitem(Bcpu[c],Mcpu[c],Pcpu[c]);
                  Acpu.add(cpu);
-                 System.out.println((c+1)+" CPU || " + Acpu.get(c));     
+                 System.out.println((c+1)+" CPU || "+ "\t" + Acpu.get(c));     
         }
             }
         System.out.print("Select CPU Number: ");
@@ -118,7 +149,7 @@ import java.util.Scanner;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
             Pcpu[w] = aPrice;
-            System.out.println(" CPU || " + Bcpu[w]+Mcpu[w]+Pcpu[w]);
+            System.out.println(" CPU || "+"\t" + Bcpu[w]+"\t"+Mcpu[w]+"\t\t"+Pcpu[w]);
         w++;
             
       ll.ddd();
@@ -126,82 +157,209 @@ import java.util.Scanner;
     public void showmainbord(){
      Scanner s2 = new Scanner(System.in);
         for(int c=0;c<Mmainbord.length;c++){
+            if(Bmainbord[c]!=null&&Mmainbord[c]!=null&&Pmainbord[c]!=0){
                  showitem mainbord = new showitem(Bmainbord[c],Mmainbord[c],Pmainbord[c]);
                  Amainbord.add(mainbord);
-                 System.out.println((c+1)+" MAINBORD || " + Amainbord.get(c));                
+                 System.out.println((c+1)+" MAINBORD || " + Amainbord.get(c)); 
+            }
             }
         System.out.print("Select MAINBORD Number: ");
          sm = s2.nextInt();
          bb = Mmainbord[sm-1];
          Filter();
  }
+    public void addmainbord() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bmainbord[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mmainbord[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pmainbord[w] = aPrice;
+            System.out.println(" MAINBORD || "+"\t" + Bmainbord[w]+"\t"+Mmainbord[w]+"\t"+Pmainbord[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showvga(){ 
         Scanner s3 = new Scanner(System.in);
         for(int c=0;c<Mvga.length;c++){
+            if(Bvga[c]!=null&&Mvga[c]!=null&&Pvga[c]!=0){
                  showitem vga = new showitem(Bvga[c],Mvga[c],Pvga[c]);
                  Avga.add(vga);
                  System.out.println((c+1)+" VGA CARD || " + Avga.get(c));                
-            }
+            }}
         System.out.print("Select VGA Number: ");
          sv = s3.nextInt();
          cc = Mvga[sv-1];
          Filter();
  }
+    public void addvga() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bvga[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mvga[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pvga[w] = aPrice;
+            System.out.println(" VGA || "+"\t" + Bvga[w]+"\t"+Mvga[w]+"\t"+Pvga[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showmemory(){  
         Scanner s4 = new Scanner(System.in);
         for(int c=0;c<Mmemory.length;c++){
+            if(Bmemory[c]!=null&&Mmemory[c]!=null&&Pmemory[c]!=0){
                  showitem memory = new showitem(Bmemory[c],Mmemory[c],Pmemory[c]);
                  Amemory.add(memory);
                  System.out.println((c+1)+" MEMORY || " + Amemory.get(c));                
-            }
+            }}
         System.out.print("Select MEMORY Number: ");
          sme = s4.nextInt();
          dd = Mmemory[sme-1];
          Filter();
  }
+    public void addmemory() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bmemory[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mmemory[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pmemory[w] = aPrice;
+            System.out.println(" MEMORY || "+"\t" + Bmemory[w]+"\t"+Mmemory[w]+"\t"+Pmemory[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showharddisk(){    
         Scanner s5 = new Scanner(System.in);
         for(int c=0;c<Mharddisk.length;c++){
+            if(Bharddisk[c]!=null&&Mharddisk[c]!=null&&Pharddisk[c]!=0){
                  showitem harddisk = new showitem(Bharddisk[c],Mharddisk[c],Pharddisk[c]);
                  Aharddisk.add(harddisk);
                  System.out.println((c+1)+" HARDDISK || " + Aharddisk.get(c));                
-            }
+            }}
         System.out.print("Select HARDDISK Number: ");
          sh = s5.nextInt();
          ee = Mharddisk[sh-1];
          Filter();
  }
+    public void addharddisk() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bharddisk[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mharddisk[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pharddisk[w] = aPrice;
+            System.out.println(" HARDDISK || "+"\t" + Bharddisk[w]+"\t"+Mharddisk[w]+"\t"+Pharddisk[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showssd(){     
         Scanner s6 = new Scanner(System.in);
         for(int c=0;c<Mssd.length;c++){
+            if(Bssd[c]!=null&&Mssd[c]!=null&&Pssd[c]!=0){
                  showitem ssd = new showitem(Bssd[c],Mssd[c],Pssd[c]);
                  Assd.add(ssd);
                  System.out.println((c+1)+" Solid State Drive || " + Assd.get(c));                
-            }
+            }}
         System.out.print("Select Solid State Drive Number: ");
          ss = s6.nextInt();
          ff = Mssd[ss-1];
          Filter();
  }
+    public void addssd() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bssd[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mssd[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pssd[w] = aPrice;
+            System.out.println(" SSD || "+"\t"  + Bssd[w]+"\t"+Mssd[w]+"\t"+Pssd[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showpower(){    
         Scanner s7 = new Scanner(System.in);
         for(int c=0;c<Mpower.length;c++){
+            if(Bpower[c]!=null&&Mpower[c]!=null&&Ppower[c]!=0){
                  showitem power = new showitem(Bpower[c],Mpower[c],Ppower[c]);
                  Apower.add(power);
                  System.out.println((c+1)+" Power Supply || " + Apower.get(c));                
-            }
+            }}
         System.out.print("Select Power Supply Number: ");
          sp = s7.nextInt();
          gg = Mpower[sp-1];
          Filter();
  }        
+    public void addpower() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bpower[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mpower[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Ppower[w] = aPrice;
+            System.out.println(" SHOWPOWER || "+"\t"  + Bpower[w]+"\t"+Mpower[w]+"\t"+Ppower[w]);
+        w++;
+            
+      ll.ddd();
+        }
     
     public void shop(){
         Scanner shq = new Scanner(System.in);
               System.out.println("Choose set number");
-              System.out.println("Set promotion1");
-              System.out.println("Set promotion2");
-              System.out.println("Set promotion3");
+              System.out.println("Press 1 Set promotion1");
+              System.out.println("Press 2 Set promotion2");
+              System.out.println("press 3 Set promotion3");
               int sh = shq.nextInt();
  
                  showitem cpu = new showitem(Bcpu[0],Mcpu[0],Pcpu[0]);
@@ -265,13 +423,13 @@ import java.util.Scanner;
     }
     public void shop1(){
         mylist mm = new mylist();
-        System.out.println("CPU" + "\t\t" + Ashop.get(0));
-        System.out.println("MAINBORD"+"\t" + Ashop.get(1));
-        System.out.println("VGA"+"\t\t" + Ashop.get(2));
-        System.out.println("MEMORY"+"\t" + Ashop.get(3));
-        System.out.println("HardDisk"+"\t" + Ashop.get(4));
-        System.out.println("SSD"+"\t\t" + Ashop.get(5));
-        System.out.println("PowerSupply"+"\t" + Ashop.get(6));
+        System.out.println("CPU           "+"\t"      + Ashop.get(0));
+        System.out.println("MAINBORD      "+"\t"      + Ashop.get(1));
+        System.out.println("VGA           "+"\t"      + Ashop.get(2));
+        System.out.println("MEMORY        "+"\t"      + Ashop.get(3));
+        System.out.println("HardDisk      "+"\t"      + Ashop.get(4));
+        System.out.println("SSD           "+"\t"      + Ashop.get(5));
+        System.out.println("PowerSupply   "+"\t"      + Ashop.get(6));
         System.out.println("Price "+price1);
         
         if(mm.s1!=10){
@@ -294,13 +452,13 @@ import java.util.Scanner;
     public void shop2(){
                  
         mylist mm = new mylist();
-        System.out.println("CPU" + "\t\t" + Ashop.get(7));
-        System.out.println("MAINBORD"+"\t" + Ashop.get(8));
-        System.out.println("VGA"+"\t\t" + Ashop.get(9));
-        System.out.println("MEMORY"+"\t" + Ashop.get(10));
-        System.out.println("HardDisk"+"\t" + Ashop.get(1));
-        System.out.println("SSD"+"\t\t" + Ashop.get(12));
-        System.out.println("PowerSupply"+"\t" + Ashop.get(13));
+        System.out.println("CPU          "+"\t"      + Ashop.get(7));
+        System.out.println("MAINBORD     "+"\t"      + Ashop.get(8));
+        System.out.println("VGA          "+"\t"      + Ashop.get(9));
+        System.out.println("MEMORY       "+"\t"      + Ashop.get(10));
+        System.out.println("HardDisk     "+"\t"      + Ashop.get(1));
+        System.out.println("SSD          "+"\t"      + Ashop.get(12));
+        System.out.println("PowerSupply  "+"\t"      + Ashop.get(13));
         if(mm.s1!=10){
         Scanner co2 = new Scanner(System.in);
             System.out.print("Confirm Selected and buy it[Y/y] or Edit[N/n]: ");
@@ -320,13 +478,13 @@ import java.util.Scanner;
     public void shop3(){
                  
         mylist mm = new mylist();
-        System.out.println("CPU" + "\t\t" + Ashop.get(14));
-        System.out.println("MAINBORD"+"\t" + Ashop.get(15));
-        System.out.println("VGA"+"\t\t" + Ashop.get(16));
-        System.out.println("MEMORY"+"\t" + Ashop.get(17));
-        System.out.println("HardDisk"+"\t" + Ashop.get(18));
-        System.out.println("SSD"+"\t\t" + Ashop.get(19));
-        System.out.println("PowerSupply"+"\t" + Ashop.get(20));
+        System.out.println("CPU        "+"\t"      + Ashop.get(14));
+        System.out.println("MAINBORD   "+"\t"      + Ashop.get(15));
+        System.out.println("VGA        "+"\t"      + Ashop.get(16));
+        System.out.println("MEMORY     "+"\t"      + Ashop.get(17));
+        System.out.println("HardDisk   "+"\t"      + Ashop.get(18));
+        System.out.println("SSD        "+"\t"      + Ashop.get(19));
+        System.out.println("PowerSupply"+"\t"      + Ashop.get(20));
         if(mm.s3!=10){
         Scanner co3 = new Scanner(System.in);
             System.out.print("Confirm Selected and buy it[Y/y] or Edit[N/n]: ");

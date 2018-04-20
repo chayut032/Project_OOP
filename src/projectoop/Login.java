@@ -47,6 +47,7 @@ str.add(code);
              checkadmin = 999;
             System.out.println("Welcome: " + useradmin);
             admin a = new admin();
+            System.out.println("======================================");
             a.homeadmin();
         }
         

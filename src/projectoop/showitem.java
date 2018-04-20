@@ -60,7 +60,7 @@ public void setItemName(String ItemBrand)
 }
 
 public String toString(){
-     state = ItemBrand + "\t||  MODEL: " + Model + "\tPrice: " + ItemPrice;
+     state = ItemBrand + "\t\t\t||  MODEL: " + Model + "\t\t\t Price: " + ItemPrice;
     return state;
 }
 
