@@ -17,6 +17,7 @@ public class Login {
     ArrayList strpass = new ArrayList();
     public int checkadmin,i,x;
     
+    
     public  void regis(){
     
 Scanner st = new Scanner(System.in);
@@ -32,8 +33,8 @@ str.add(code);
     
     
     public void login(){
-        final String useradmin = "adminpom";
-        final String passadmin = "12345678";
+        final String useradmin = "admin";
+        final String passadmin = "123456";
        
         Scanner sc =new Scanner(System.in);
         System.out.print("Enter Username: ");
@@ -42,10 +43,11 @@ str.add(code);
         System.out.print("Enter Password: ");
          pass = sc.nextLine();
         
-        if(user.equals(useradmin) && pass.equals(pass)){
+        if(user.equals(useradmin) && pass.equals(passadmin)){
              checkadmin = 999;
             System.out.print("Welcome: " + useradmin);
             admin a = new admin();
+            a.homeadmin();
         }
         
         for( i=0; i<=str.size()-1;i++){
@@ -88,6 +90,19 @@ str.add(code);
             System.out.println("Press 1 or 2");
             home();
         }       
+    }
+    public void mem(){
+         member m = new member();
+    }
+ 
+    public void ddd(){
+        mylist mq = new mylist();
+        mq.addlist();
+
+    }
+    public void aaa(){
+        mylist mq = new  mylist();
+        mq.calcu();
     }
     
     
