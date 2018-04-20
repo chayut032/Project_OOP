@@ -45,7 +45,7 @@ str.add(code);
         
         if(user.equals(useradmin) && pass.equals(passadmin)){
              checkadmin = 999;
-            System.out.print("Welcome: " + useradmin);
+            System.out.println("Welcome: " + useradmin);
             admin a = new admin();
             a.homeadmin();
         }
@@ -96,8 +96,8 @@ str.add(code);
     }
  
     public void ddd(){
-        mylist mq = new mylist();
-        mq.addlist();
+        admin mq = new admin();
+        mq.homeadmin();
 
     }
     public void aaa(){

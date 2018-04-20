@@ -16,7 +16,7 @@ import java.util.Scanner;
          ArrayList Assd = new ArrayList();
          ArrayList Apower = new ArrayList();
          ArrayList Ashop = new ArrayList();
-         public static int sc,sm,sv,sme,sh,ss,sp,y,yy=0,admina1=0;
+         public static int c,sc,sm,sv,sme,sh,ss,sp,y,yy=0,admina1=0,ca,v=0, w=5;;
          public String aa,bb,cc,dd,ee,ff,gg;
          Login ll = new Login();
          public String con1;
@@ -87,26 +87,42 @@ import java.util.Scanner;
         }
         if(y!=10 || admina1==1){
           select(); 
-        }
-          
-          
-
-          
+        }      
     }
     public void showcpu() { 
         Scanner s1 = new Scanner(System.in);
-        for(int c=0;c<Mcpu.length;c++){
+        for( c=0;c<Mcpu.length;c++){
+            if(Bcpu[c]!=null&&Mcpu[c]!=null&&Pcpu[c]!=0){
                  showitem cpu = new showitem(Bcpu[c],Mcpu[c],Pcpu[c]);
                  Acpu.add(cpu);
-                 System.out.println((c+1)+" CPU || " + Acpu.get(c));                
+                 System.out.println((c+1)+" CPU || " + Acpu.get(c));     
+        }
             }
         System.out.print("Select CPU Number: ");
          sc = s1.nextInt();
          aa =Mcpu[sc-1];
          Filter();
-         
-        
     }
+        public void addCpu() {      
+        String aName;
+        String aModel;
+        int aPrice;
+        
+            Scanner aad = new Scanner(System.in);
+            System.out.println("Brand: ");
+            aName = aad.nextLine();
+            Bcpu[w] = aName;
+            System.out.println("Model: ");
+            aModel = aad.nextLine();
+            Mcpu[w] = aModel;
+            System.out.println("Price: ");
+            aPrice = aad.nextInt();
+            Pcpu[w] = aPrice;
+            System.out.println(" CPU || " + Bcpu[w]+Mcpu[w]+Pcpu[w]);
+        w++;
+            
+      ll.ddd();
+        }
     public void showmainbord(){
      Scanner s2 = new Scanner(System.in);
         for(int c=0;c<Mmainbord.length;c++){
@@ -202,8 +218,7 @@ import java.util.Scanner;
                  Ashop.add(ssd);
                     showitem power = new showitem(Bpower[2],Mpower[2],Ppower[2]);
                  Ashop.add(power);
-                 
-                 
+                                
                  showitem cpu2 = new showitem(Bcpu[2],Mcpu[2],Pcpu[2]);
                  Ashop.add(cpu2);
                  showitem mainbord2 = new showitem(Bmainbord[1],Mmainbord[1],Pmainbord[1]);
@@ -236,11 +251,15 @@ import java.util.Scanner;
               
                  if(sh == 1){
                      shop1();
+                     
+                     
                                  
                  }else if(sh == 2){
                      shop2();
+                     
                  }else if(sh == 3){
                      shop3();
+                     
                  }
             
     }
@@ -261,8 +280,8 @@ import java.util.Scanner;
              con1 = co1.nextLine();
             
             if(con1.equalsIgnoreCase("y")){
-                
-                ll.aaa();
+                mm.calcu1();
+                //ll.aaa();
                             
             }else if(con1.equalsIgnoreCase("n")){
                 select();
@@ -288,8 +307,8 @@ import java.util.Scanner;
             String con2 = co2.nextLine();
             
             if(con2.equalsIgnoreCase("y")){
-                
-                ll.aaa();
+                mm.calcu2();
+                //ll.aaa();
                             
             }else if(con2.equalsIgnoreCase("n")){
                 select();
@@ -314,13 +333,15 @@ import java.util.Scanner;
             String con3 = co3.nextLine();
             
             if(con3.equalsIgnoreCase("y")){
-                ll.aaa();
+                mm.calcu3();
+                //ll.aaa();
                             
             }else if(con3.equalsIgnoreCase("n")){
                 
             }
         }
         
-    } 
+    }
+    
  }
 

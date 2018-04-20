@@ -19,7 +19,7 @@ public class mylist extends showpc {
     Login lo =new Login();
     String name;
     public double totalprice,adminprice,allmoneyadmin,change1,change2;
-    public double moneyadmin=50000;
+    public double moneyadmin,totalmoneyadmin;
     public static int s1=0,s2=0,s3=0,ca;
     Login log = new Login();
          ArrayList<showitem> lcpu = new ArrayList<showitem>();
@@ -85,7 +85,7 @@ public class mylist extends showpc {
        
         if(ca>=totalprice){
             double change = ca-totalprice;
-            
+                       
             System.out.println("Change: "+ change);
             System.out.println("***** purchase successfully *****");
             log.home();
@@ -96,6 +96,61 @@ public class mylist extends showpc {
         
         System.out.println("******Thank You********");
     } 
+    public void calcu1(){
+        Scanner cc = new Scanner(System.in);
+        System.out.print("Enter money: ");
+         ca = cc.nextInt();
+       
+        if(ca>=price1){
+            double change1 = ca-price1;
+            
+            System.out.println("Change: "+ change1);
+            System.out.println("***** purchase successfully *****");
+            log.home();
+        }else {
+            System.out.println("not enough money");
+            calcu1();
+        }
+        
+        System.out.println("******Thank You********");
+        
+    }
+    public void calcu2(){
+    Scanner cc = new Scanner(System.in);
+        System.out.print("Enter money: ");
+         ca = cc.nextInt();
+       
+        if(ca>=price2){
+            double change2 = ca-price2;
+            
+            System.out.println("Change: "+ change2);
+            System.out.println("***** purchase successfully *****");
+            log.home();
+        }else {
+            System.out.println("not enough money");
+            calcu2();
+        }
+        
+        System.out.println("******Thank You********");
+    }
+    public void calcu3(){
+    Scanner cc = new Scanner(System.in);
+        System.out.print("Enter money: ");
+         ca = cc.nextInt();
+       
+        if(ca>=price3){
+            double change3 = ca-price3;
+            
+            System.out.println("Change: "+ change3);
+            System.out.println("***** purchase successfully *****");
+            log.home();
+        }else {
+            System.out.println("not enough money");
+            calcu3();
+        }
+        
+        System.out.println("******Thank You********");
+    }
     
     
   
