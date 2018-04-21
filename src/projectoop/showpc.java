@@ -14,7 +14,7 @@ import java.util.Scanner;
          ArrayList Apower = new ArrayList();
          ArrayList Ashop = new ArrayList();
          public static int c,sc,sm,sv,sme,sh,ss,sp,y,yy=0,
-                 admina1=0,ca,v=0, w=5;;
+                 admina1=0,ca,v=0, w=5,e=5,r=5,t=5,p=5,u=5,q=5;
          public String aa,bb,cc,dd,ee,ff,gg;
          Login ll = new Login();
          public String con1;
@@ -75,6 +75,8 @@ import java.util.Scanner;
             String con = co.nextLine();
             
             if(con.equalsIgnoreCase("y")){
+                mylist ms =new mylist();
+                ms.addlist();
                 ll.ddd();
                             
             }else if(con.equalsIgnoreCase("n")){
@@ -179,16 +181,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bmainbord[w] = aName;
+            Bmainbord[e] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mmainbord[w] = aModel;
+            Mmainbord[e] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Pmainbord[w] = aPrice;
-            System.out.println(" MAINBORD || "+"\t" + Bmainbord[w]+
-                    "\t"+Mmainbord[w]+"\t"+Pmainbord[w]);
-        w++;
+            Pmainbord[e] = aPrice;
+            System.out.println(" MAINBORD || "+"\t" + Bmainbord[e]+
+                    "\t"+Mmainbord[e]+"\t"+Pmainbord[e]);
+        e++;
             
       ll.ddd();
         }
@@ -213,16 +215,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bvga[w] = aName;
+            Bvga[r] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mvga[w] = aModel;
+            Mvga[r] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Pvga[w] = aPrice;
-            System.out.println(" VGA || "+"\t" + Bvga[w]+"\t"+Mvga[w]+"\t"
-                    +Pvga[w]);
-        w++;
+            Pvga[r] = aPrice;
+            System.out.println(" VGA || "+"\t" + Bvga[r]+"\t"+Mvga[r]+"\t"
+                    +Pvga[r]);
+        r++;
             
       ll.ddd();
         }
@@ -248,16 +250,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bmemory[w] = aName;
+            Bmemory[t] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mmemory[w] = aModel;
+            Mmemory[t] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Pmemory[w] = aPrice;
-            System.out.println(" MEMORY || "+"\t" + Bmemory[w]+
-                    "\t"+Mmemory[w]+"\t"+Pmemory[w]);
-        w++;
+            Pmemory[t] = aPrice;
+            System.out.println(" MEMORY || "+"\t" + Bmemory[t]+
+                    "\t"+Mmemory[t]+"\t"+Pmemory[t]);
+        t++;
             
       ll.ddd();
         }
@@ -283,16 +285,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bharddisk[w] = aName;
+            Bharddisk[p] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mharddisk[w] = aModel;
+            Mharddisk[p] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Pharddisk[w] = aPrice;
-            System.out.println(" HARDDISK || "+"\t" + Bharddisk[w]
-                    +"\t"+Mharddisk[w]+"\t"+Pharddisk[w]);
-        w++;
+            Pharddisk[p] = aPrice;
+            System.out.println(" HARDDISK || "+"\t" + Bharddisk[p]
+                    +"\t"+Mharddisk[p]+"\t"+Pharddisk[p]);
+        p++;
             
       ll.ddd();
         }
@@ -318,16 +320,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bssd[w] = aName;
+            Bssd[u] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mssd[w] = aModel;
+            Mssd[u] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Pssd[w] = aPrice;
-            System.out.println(" SSD || "+"\t"  + Bssd[w]+"\t"
-                    +Mssd[w]+"\t"+Pssd[w]);
-        w++;
+            Pssd[u] = aPrice;
+            System.out.println(" SSD || "+"\t"  + Bssd[u]+"\t"
+                    +Mssd[u]+"\t"+Pssd[u]);
+        u++;
             
       ll.ddd();
         }
@@ -352,16 +354,16 @@ import java.util.Scanner;
             Scanner aad = new Scanner(System.in);
             System.out.println("Brand: ");
             aName = aad.nextLine();
-            Bpower[w] = aName;
+            Bpower[q] = aName;
             System.out.println("Model: ");
             aModel = aad.nextLine();
-            Mpower[w] = aModel;
+            Mpower[q] = aModel;
             System.out.println("Price: ");
             aPrice = aad.nextInt();
-            Ppower[w] = aPrice;
+            Ppower[q] = aPrice;
             System.out.println(" SHOWPOWER || "+"\t"  
-                    + Bpower[w]+"\t"+Mpower[w]+"\t"+Ppower[w]);
-        w++;
+                    + Bpower[q]+"\t"+Mpower[q]+"\t"+Ppower[q]);
+        q++;
             
       ll.ddd();
         }

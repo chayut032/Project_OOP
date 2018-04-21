@@ -96,6 +96,7 @@ str.add(code);
  
     public void ddd(){
         admin mq = new admin();
+        
         mq.homeadmin();
 
     }
