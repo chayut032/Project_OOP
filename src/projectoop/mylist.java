@@ -56,7 +56,8 @@ public class mylist extends showpc {
             System.out.println(lharddisk.get(0));
             System.out.println(lssd.get(0));
             System.out.println(lpower.get(0));
-            totalprice = Pcpu[sc-1]+Pmainbord[sm-1]+Pvga[sv-1]+Pvga[sv-1]+Pmemory[sme-1]+Pharddisk[sh-1]+Pssd[ss-1]+Ppower[sp-1]; 
+            totalprice = Pcpu[sc-1]+Pmainbord[sm-1]+Pvga[sv-1]+
+  Pvga[sv-1]+Pmemory[sme-1]+Pharddisk[sh-1]+Pssd[ss-1]+Ppower[sp-1]; 
         System.out.println("Totalprice: " + totalprice + " Bath");
         
         Scanner p = new Scanner(System.in);

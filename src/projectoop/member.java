@@ -33,9 +33,13 @@ import java.util.Scanner;
        if(member1 == 1){
            Filter();
        }else if(member1 == 2){
-           shop();
-           
-           
+           shop();       
+       }else if(member1 == 3){
+           Login ho =new Login();
+           ho.home();
+       }else{
+           Login ho =new Login();
+           ho.mem();
        }
        
     } 

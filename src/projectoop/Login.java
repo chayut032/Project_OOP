@@ -65,9 +65,7 @@ str.add(code);
             System.out.println("Username or Password is incorrect");
             System.out.println("===============================");
             home();
-        }
-        
-         
+        }        
     }
     
     public void home(){
@@ -104,7 +102,5 @@ str.add(code);
     public void aaa(){
         mylist mq = new  mylist();
         mq.calcu();
-    }
-    
-    
+    }   
 }

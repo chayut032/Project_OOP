@@ -31,33 +31,6 @@ public class showitem {
         System.out.print(toString());
     }
 
-    
-
-
-public String getItemBrand() {
-    return ItemBrand;
-}
-
-public double getItemPrice() {
-    return ItemPrice;
-}
-
-public String getItemGen() {
-    return Model;
-}
-public void setItemName(String ItemBrand)
-{
-    this.ItemBrand = ItemBrand;
-}
-
-    public void setItempPrice(double ItemPrice)
-{
-    this.ItemPrice = ItemPrice;
-}
-    public void setItemGen(String ItemGen)
-{
-    this.Model = ItemGen;
-}
 
 public String toString(){
      state = ItemBrand + "\t\t\t||  MODEL: " + Model + "\t\t\t Price: " + ItemPrice;
