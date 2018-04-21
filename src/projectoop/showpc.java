@@ -457,7 +457,7 @@ import java.util.Scanner;
                 //ll.aaa();
                             
             }else if(con1.equalsIgnoreCase("n")){
-                select();
+                shop();
                 //member m = new member();
                 
             }
@@ -487,7 +487,7 @@ import java.util.Scanner;
                 //ll.aaa();
                             
             }else if(con2.equalsIgnoreCase("n")){
-                select();
+                shop();
                 //member m = new member();
                 
             }
@@ -516,7 +516,7 @@ import java.util.Scanner;
                 //ll.aaa();
                             
             }else if(con3.equalsIgnoreCase("n")){
-                select();
+                shop();
                 //member m = new member();
             }
         }
